@@ -12,7 +12,7 @@ import { Sign } from 'crypto';
 
 const Navbar = () => {
   return (
-  <Box
+  <Flex
       as="nav"
       w="auto"
       padding = "5px 24px"
@@ -48,7 +48,7 @@ const Navbar = () => {
         <Spacer/>
         <Menu2bar/>
         <SignIn/>
-    </Box>
+    </Flex>
   );
 }
 
