@@ -1,5 +1,6 @@
 import Copilot from "@/Components/MainPage/Copilot";
 import Main1 from "@/Components/MainPage/Main1";
+import Product from "@/Components/MainPage/Product";
 import Promote from "@/Components/MainPage/Promote";
 import Video from "@/Components/MainPage/Video";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Promote></Promote>
       <Copilot></Copilot>
       <Video></Video>
+      <Product></Product>
     </>
   )
 }
