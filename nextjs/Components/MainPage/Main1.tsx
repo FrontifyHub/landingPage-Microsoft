@@ -38,6 +38,8 @@ const Main1 = () => {
           height ="500px"
           mt={{ base: '20px', md: '0' }}
           borderRadius="lg"
+          // justifyContent="center"
+          // alignItems="flex-start"
         />
       </GridItem>
     </Grid>
