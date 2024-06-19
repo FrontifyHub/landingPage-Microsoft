@@ -1,16 +1,17 @@
 "use client"
 
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import { Flex, Box, Text, Divider, Link } from '@chakra-ui/react'
+import { Flex, Box, Text, Divider, Link, Image } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 
 const MotionChevronRightIcon = motion(ChevronRightIcon);
 const More = () => {
   return (
-    <div 
-        style={{ background: 'linear-gradient(180.05deg, #8DC8E8 0.04%, rgba(141, 200, 232, 0.578125) 59.8%, rgba(141, 200, 232, 0) 104.1%)', 
-                marginTop: "0" }}
+    <Box 
+        bgGradient= "linear(180.05deg, #8DC8E8 0.04%, rgba(141, 200, 232, 0.578125) 59.8%, rgba(141, 200, 232, 0) 104.1%)"
+        mt = "0px"
+        pb = "72px"
     >
       <Flex 
         paddingLeft="20px" 
@@ -53,7 +54,17 @@ const More = () => {
           <Divider orientation="horizontal" borderColor="RGBA(0, 0, 0, 0.24)" />
         </Box>
       </Flex>
-    </div>
+      <Image 
+        src = "/double.png" 
+        alt = "Search" 
+        height = "385px"
+        width = "auto"
+        borderRadius="lg" 
+        ml = "45px"
+        mt = "40px"
+        pl = "72px"
+        />
+    </Box>
   )
 }
 
