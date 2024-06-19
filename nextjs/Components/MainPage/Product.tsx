@@ -4,7 +4,7 @@ import React from 'react'
 const Product = () => {
   return (
     <div>
-        <Flex flexDirection="column" alignItems ="center">
+        <Flex flexDirection="column" alignItems ="center" pt =" 48px" pb = "38px">
             <Text fontSize="6xl" as='b' textAlign="center" mt ="40px">
                 Tìm sản phẩm phù hợp
             </Text>

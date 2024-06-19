@@ -4,7 +4,7 @@ import React from 'react'
 const Promote = () => {
   return (
     <div>
-        <Flex flexDirection="column">
+        <Flex flexDirection="column" pt = "38px" pb= "38px">
             <Text fontSize="6xl" as='b' textAlign="center" mt ="40px">
                 Phiên bản Windows tốt nhất từ trước đến nay
             </Text>
