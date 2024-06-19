@@ -5,19 +5,18 @@ import React from 'react';
 const Main1 = () => {
   return (
     <Grid 
-      templateColumns="repeat(3, 1fr)" 
-      gap="10px" 
-      paddingLeft="45px" 
-      paddingRight="45px" 
-      margin="48px"
-      width="100%"
+      templateColumns="repeat(4, 1fr)" 
+      paddingLeft="20px" 
+      paddingRight="48px" 
+      marginLeft = "45px"
+      marginTop="40px"
+      gap="100px"
     >
-      <GridItem colSpan={1}>
+      <GridItem colSpan={2} alignItems = "center" mt = "32px">
         <Box>
           <Box
             width="60px"
             height="4px"
-            marginTop = "32px"
             bgGradient="linear(97.21deg, #0067B8 5.82%, #50E6FF 134%)"
           />
           <Text as='b' fontSize="5xl">
@@ -38,8 +37,6 @@ const Main1 = () => {
           height ="500px"
           mt={{ base: '20px', md: '0' }}
           borderRadius="lg"
-          // justifyContent="center"
-          // alignItems="flex-start"
         />
       </GridItem>
     </Grid>

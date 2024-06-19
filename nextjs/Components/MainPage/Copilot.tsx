@@ -1,4 +1,4 @@
-import { Box, Grid,GridItem, Text, Image, Button } from '@chakra-ui/react';
+import { Box, Grid, GridItem, Text, Image, Button } from '@chakra-ui/react';
 import React from 'react'
 
 const Copilot = () => {
@@ -25,7 +25,7 @@ const Copilot = () => {
           <Box
             width="60px"
             height="4px"
-            marginTop = "32px"
+            mb = "32px"
             bgGradient="linear(97.21deg, #0067B8 5.82%, #50E6FF 134%)"
           />
           <Text as='b' fontSize="5xl">
