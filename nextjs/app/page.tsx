@@ -1,5 +1,6 @@
 import Better from "@/Components/MainPage/Better";
 import Copilot from "@/Components/MainPage/Copilot";
+import Detail from "@/Components/MainPage/Detail";
 import Feature from "@/Components/MainPage/Feature";
 import Main1 from "@/Components/MainPage/Main1";
 import More from "@/Components/MainPage/More";
@@ -20,6 +21,7 @@ export default function Home() {
       <ProductImg></ProductImg>
       <Better></Better>
       <More></More>
+      <Detail></Detail>
     </>
   )
 }

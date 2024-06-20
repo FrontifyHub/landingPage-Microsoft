@@ -5,7 +5,7 @@ import SignIn from './SignIn';
 
 const Menu2bar = () => {
 
-    const [toast, setToast] = useState(false);
+const [toast, setToast] = useState(false);
   return (
     <Flex>
         <Menu>
