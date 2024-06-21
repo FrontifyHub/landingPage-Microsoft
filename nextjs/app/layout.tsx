@@ -7,6 +7,7 @@ import Footer from "@/Components/Footer/Footer";
 import Navbar from "@/Components/NavBar/Navbar";
 import Toggle from "@/Components/Toggle/Toggle";
 import Microsoft from "@/Components/Footer/Microsoft";
+import MoreInfo from "@/Components/Footer/MoreInfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
              {children} 
           </main>
           <Microsoft></Microsoft>
+          <MoreInfo></MoreInfo>
           <Footer/>
         </ChakraProvider>
       </body>

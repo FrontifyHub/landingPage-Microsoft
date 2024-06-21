@@ -1,5 +1,5 @@
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import { Menu, MenuButton, MenuButtonProps, MenuItemProps, MenuList, MenuItem, Link } from '@chakra-ui/react';
+import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { Menu, MenuButton, MenuButtonProps, MenuItemProps, MenuList, MenuItem, Link, IconButton, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react'
 
 //2 parts 
@@ -16,7 +16,7 @@ interface menuProps {
 }
 
 //Records: 
-//allows you to define an object with dynamic keys and specific value types
+//allows to define an object with dynamic keys and specific value types
 
 const insideItems: Record<string, list[]> = {
   'Giới thiệu về Windows': [
@@ -90,16 +90,45 @@ const Customize : React.FC<menuProps> = ({title, items}) => (
 );
 
 const Menu1bar: React.FC = () => {
+  const showHamburger = useBreakpointValue({ base: true, md: true, lg: false });
   return (
     <>
-      {Object.entries(insideItems).map(([title, items], index) => (
-        <Customize key ={index} title ={title} items ={items} />
-      ))}
-      <Link href = "#" fontSize ="sm" pl = "2px">
+      {showHamburger ? (
+        <IconButton
+          aria-label="Open Menu"
+          icon={<HamburgerIcon fontSize ="30px" />}
+          size="sm"
+          marginLeft="10px"
+          padding="2px"
+        />
+      ) : (
+        Object.entries(insideItems).map(([title, items], index) => (
+          <Menu key={index}>
+            <MenuButton
+              as={Link}
+              {...buttonStyles}
+            >
+              {title}
+              <ChevronDownIcon />
+            </MenuButton>
+            <MenuList bg="gray.100" borderBottom="black solid 3px" width="168px">
+              {items.map((item, index) => (
+                <MenuItem key={index} {...itemStyles}>
+                  <Link href={item.link} fontSize="sm">
+                    {item.text}
+                  </Link>
+                </MenuItem>
+              ))}
+            </MenuList>
+          </Menu>
+        ))
+      )} 
+      
+      {/* Bugs: also need to "join" the HamburgerIcon */}
+      <Link href="#" fontSize="sm" pl="2px">
         Dành cho doanh nghiệp
-      </Link> 
+      </Link>
     </>
-  )
-}
-
+  );
+};
 export default Menu1bar

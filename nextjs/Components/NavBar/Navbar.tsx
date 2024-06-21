@@ -1,14 +1,13 @@
 
 "use client";
-import { Box, ChakraProvider, DarkMode, Flex, Image, Menu, MenuButton, MenuItem, MenuList, Spacer, Text, border, extendTheme } from '@chakra-ui/react';
+import { Box, Flex, Image, Spacer, Text} from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import Menu1bar from './Menu1bar';
-import { ChevronLeftIcon } from '@chakra-ui/icons';
 import Menu2bar from './Menu2bar';
 import SignIn from './SignIn';
-import { Sign } from 'crypto';
 
+/////BUGS : need to fix the display
 
 const Navbar = () => {
   return (
@@ -17,10 +16,9 @@ const Navbar = () => {
       w="auto"
       padding = "5px 24px"
       position="relative"
-      //zIndex="2"
       margin="7px"
-      display="flex"
-      alignItems="center">
+      alignItems="center"
+      display={{ base: 'none', md: 'flex' }}>
         <Flex>
             <Link href="https://www.microsoft.com/vi-vn/windows">
                 <Image src="/microsoft.png" alt="Microsoft logo" width={108} height={23} ml ="40px" />

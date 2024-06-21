@@ -1,5 +1,6 @@
 "use client"
 
+//Bugs: show messages
 import { Box, Flex, Image, Link, Spacer, Text } from '@chakra-ui/react'
 import { useState } from 'react';
 
