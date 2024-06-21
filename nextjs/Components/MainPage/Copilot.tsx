@@ -4,7 +4,7 @@ import React from 'react'
 const Copilot = () => {
   return (
     <Grid 
-        templateColumns="repeat(4, 1fr)" 
+        templateColumns={{ base: '1fr', md: 'repeat(4, 1fr)' }}
         paddingLeft="20px" 
         paddingRight="20px" 
         marginLeft = "45px"

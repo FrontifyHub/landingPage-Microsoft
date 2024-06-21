@@ -6,6 +6,9 @@ import React from 'react';
 
 const MotionChevronRightIcon = motion(ChevronRightIcon);
 
+
+//Array??
+//Bugs: icon should move when hover the link, not only itself
 const Feature = () => {
   const iconVariants = {
     hover: { x: 5 },
