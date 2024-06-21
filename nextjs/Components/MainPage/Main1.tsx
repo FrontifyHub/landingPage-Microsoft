@@ -7,19 +7,19 @@ const Main1 = () => {
     <Grid 
       templateColumns="repeat(4, 1fr)" 
       paddingLeft="20px" 
-      paddingRight="48px" 
-      marginLeft = "45px"
+      paddingRight="20px" 
+      marginLeft = "48px"
       marginTop="40px"
-      gap="100px"
+      justifyItems = "center"
     >
-      <GridItem colSpan={2} alignItems = "center" mt = "32px">
-        <Box>
+      <GridItem colSpan={{ base: 4, md: 1 }} alignItems="center" mt={{ base: '32px', md: '0' }}>
+        <Box mt ="15px" ml = "32px">
           <Box
             width="60px"
             height="4px"
             bgGradient="linear(97.21deg, #0067B8 5.82%, #50E6FF 134%)"
           />
-          <Text as='b' fontSize="5xl">
+          <Text as='b' fontSize="5xl" letterSpacing ="0.05em">
             Làm cho cuộc sống hằng ngày trở nên dễ dàng hơn 
           </Text>
           <Text fontSize="xl"> 
@@ -29,7 +29,7 @@ const Main1 = () => {
           </Text>
         </Box>
       </GridItem>
-      <GridItem colSpan={2}>
+      <GridItem colSpan={{ base: 4, md: 3 }}>
         <Image
           src="/screen.png"
           alt="Windows Screen"
